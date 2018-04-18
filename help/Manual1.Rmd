@@ -1,0 +1,196 @@
+---
+title: "<br> <br> <h1 class= 'text-center'> Manual de Usuario</h1> \n <h2 class= 'text-center'>TMY-Generator</h2>
+  \n <h4 class= 'text-center'>Version 0.4.0</h4> <br>"
+author: "<h4 class= 'text-right'>Gabriel Gaona</h4> \n <h4 class= 'text-right'>Manuel
+  Almaguer</h4> "
+date: "<h4 class= 'text-right'>September 15, 2015 </h4>"
+output:
+  html_document:
+    css: css/style.css
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+---
+
+# Introducción
+
+La herramienta para generación de años meteorológicos típicos a partir de datos horarios "TMY-Generator" es puesta a disposición bajo licenciamiento Creative Commons. La versión 0.4.0 se encuentra en fase de pruebas, por lo tanto se esperan modificaciones en el futuro. 
+
+Esta aplicación web permite que el usuario analice una base meteorológica de datos horarios y obtenga como resultado el conjunto de datos correspondiente a un año meteorlógico típico. 
+
+Este **Manual de Usuario** describe las diferentes secciones que componen la interacción de la herramienta con el usuario. Así se pretende lograr un mejor entendimiento de la herramienta.
+
+# Descripción de las diferentes secciones y su funcionalidad
+
+La aplicación consta de dos partes generales: La primera corresponde a las configuraciones generales que el usuario debe realizar; mientras que la segunda parte es el resultado del procesamiento de la información ingresada en la primera parte. La figura a continuación muestra una vista general de la herramienta resaltando las diferentes secciones de la misma. 
+
+
+A continuación se describirán las diferentes secciones:
+
+## Entradas de Datos
+
+La primera parte está conformada por las secciones:
+
+`Sección 1:` *Table input*
+
+`Sección 2:` *Period Settings*
+
+`Sección 3:` *Table Settings*
+
+`Sección 4:` *Weighting for Filkenstein'Schaffer*
+
+<img class="floatleft" src="img/general.png" alt="Imagen General">
+
+
+### `Sección 1:`*Table input*
+
+> La Sección 1 corresponde a los datos de entrada de la herramienta, la misma recibe un fichero el cual es procesado para extraer la información del mismo.
+
+
+<img class="imagenLeft" src="img/input.png" alt="Procesamiento de Ficheros"> 
+<br >
+
+  1. Funcionalidad para seleccionar el fichero que se desea leer. 
+  
+  2. Identifica si el fichero posee cabeceras. Las cabeceras son tomadas de la primera linea del fichero que identifica con este nombre el dato de las diferentes columnas.
+  
+  3. Delimitador de Texto para identificar 1 dato.
+  
+  4. Delimitador utilizado para separar las diferentes columnas de los datos.
+
+ <br style="clear:left">
+ 
+### ` Sección 2:` *Period Settings*
+> La Sección 2 es la encargada de establecer el rango de fechas entre el cual se desea estudiar la información.
+
+ <img class="imagenLeft" src="img/period.png" alt="Periodo en el que se deba analizar la Información"> 
+ <br >
+
+
+5. Especifica la fecha de inicio del periodo que se desea estudiar, debe coincidir con la primera fecha de inicio que posea el fichero a procesar.
+
+6. Especifica la fecha de fin del periodo que se desea estudiar, debe coincidir con la última fecha que posea el fichero procesado.
+
+7. Cantidad de Horas por Año que aparecen en el fichero procesado.
+
+  <br style="clear:left">
+  
+### ` Sección 3:` *Table Settings*
+
+> La Sección 3 esta referida a la configuración de las variables  según la cantidad de columnas y la organización de los datos por columnas en el fichero procesado. Se debe hacer coincidir el número de la variable con la columna del fichero.
+ 
+ <img class="imagenLeft" src="img/tabla.png" alt="Configuración de las variables  según la cantidad de columnas">
+ 
+
+8. El Campo 8 se refiere a la cantidad de columnas(variables) contenidas en el fichero procesado.
+
+9. El Campo 9 se refiere a la ubicación de la columna Fecha dentro del fichero procesado, se recomienda sea la primera aunque no es obligatorio.
+
+10. El Campo 10 se refiere a la ubicación de la columna Temperatura dentro del fichero procesado.
+
+11. El Campo 11 se refiere a la ubicación de la columna Humedad Relativa dentro del fichero procesado.
+
+12. El Campo 12 se refiere a la ubicación de la columna Velocidad del Viento dentro del fichero procesado.
+
+13. El Campo 12 se refiere a la ubicación de la columna Radiación Global dentro del fichero procesado.
+
+
+  <br style="clear:left">
+ 
+### ` Sección 4:` *Weighting for Filkenstein'Schaffer*
+> La Sección 4 hace Referencia a los distintos valores que pueden ser ajustados para otorgarle una ponderación particular a las diferentes variables y en función de estos valores calcular el año meteorológico típico, tenga presente que la sumatoria de todos los valores debe dar como resultado final 100, por defecto carga los valores especificados en el método.
+ 
+  <img class="imagenLeft" src="img/peso.png" alt="Configuración de las variables  según la cantidad de columnas">
+ 
+
+ 
+14. El  Campo 14 hace referencia a la ponderación que contendrá el promedio de la Temperatura(Ta) cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+15. El  Campo 15 hace referencia a la ponderación que contendrá el máximo de la Temperatura cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+16. El  Campo 16 hace referencia a la ponderación que contendrá el mínimo de la Temperatura cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+17. El  Campo 17 hace referencia a la ponderación que contendrá el promedio de la Humedad Relativa(Rh) cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+18. El  Campo 18 hace referencia a la ponderación que contendrá el máximo de la Humedad Relativa cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+19. El  Campo 19 hace referencia a la ponderación que contendrá el mínimo de la Humedad Relativa cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+20. El  Campo 20 hace referencia a la ponderación que contendrá el promedio de la Velocidad del Viento(Ws) cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+21. El  Campo 21 hace referencia a la ponderación que contendrá el máximo de la Velocidad del Viento cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+
+22. El  Campo 22 hace referencia a la ponderación que contendrá el mínimo de la Velocidad del Viento cuando se proceda a realizar el cálculo para identificar el año meteorológico típico.
+ 
+
+  <br style="clear:left">
+ 
+ 
+##Salida de Datos:
+  <img class="imagenLeft" src="img/salida.png" alt="Configuración de las variables  según la cantidad de columnas">
+    <br style="clear:left">
+    
+### `Sección 5:` *Download TMY tables*
+> La Sección 5 es referente a la descarga de la información que se genera de los años meteorológicos típicos.
+  
+  <img class="imagenLeft" src="img/download.png" alt="Opciones de Descarga">
+  <br>
+
+23. El Campo 23 representa las diferentes opciones que se tiene para realizar la descarga. 
+
+24. El Campo 24 representa la opción para realizar la descargar de un nuevo fichero en formato CSV.
+
+  <br style="clear:left">
+ 
+   <img class="imagenLeft" src="img/dOptions.png" alt="Opciones de Descarga">
+ 
+
+<b> Opciones Campo 23</b>
+
+. TMY final data exporta los datos de los  meses que componen el año  meteorológico típico con una corrección de los valores para que no exista un salto brusco en el limite de cada mes con el comienzo del próximo mes.
+
+. TMY Raw data exporta los datos de los  meses que componen el año  meteorológico típico sin corrección de los valores.
+
+. Selected months exporta la tabla de meses que componen el año meteorológico típico, son los mismos datos que se pueden observar en el resumen de la sección 6.
+
+  <br style="clear:left">
+
+### `Sección 6:` *Graphic and Summary*
+
+> Sección 6: La Sección 6 muestra el resumen y gráficos que son generados producto del procesamiento del fichero.
+
+ 
+<img class="imagenLeft" src="img/resumen.png" alt="Resumen y Gráficas">
+  <br style="clear:left">
+
+25. El Campo 25 muestra un resumen producto del procesamiento del fichero. Compuesto por 2 tablas, una tabla resumen de la media, mínimo y máximo de cada una de las variables por las que están compuestos los datos y otra tabla que muestra los meses que van a conformar  el año meteorológico típico.
+
+26. El Campo 26 muestra el comportamiento del año típico para la variable seleccionada, se utilizan las fechas del último año procesado pero esto representa el año típico calculado según el método, no el último año de los datos subidos.
+
+<img class="imagenLeft" src="img/grafi28.png" alt="Opciones de Descarga">
+ <br style="clear:left">
+28. El Campo 28 muestra la funcionalidad que permite estudiar un rango especificado por el usuario. Haciendo doble clic se muestra en la gráfica pero con el rango seleccionado por el usuario. 
+Cuando estemos en el periodo seleccionado haciendo doble clic podmos  volver a restablecer el gráfico completo sin rango. 
+
+<br>
+<img class="imagenLeft" src="img/rango.png" alt="Opciones de Descarga">
+<p class ="text-center">Imagen resultado de haber realizado doble clic sobre el rango seleccionado.<p>
+  <br style="clear:left">
+
+<img class="imagenLeft" src="img/Selection26.png" alt="Opciones de Descarga">
+  <br><br> 
+  
+. Figura de las diferentes variables que componen el año  meteorológico típico y que son opciones por las cuales se puede graficar.
+
+  <br style="clear:left">
+  
+  <img class="imagenLeft" src="img/graficas29.png" alt="Opciones de Descarga">
+<br>
+27. El Campo 27 muestra el comportamiento según la función de distribución de frecuencia acumulada para cada uno de los meses procesados, además muestra el promedio de los meses. Posee una leyenda la cual indica a que año pertenece cada mes y cual es el promedio.
+
+  <br style="clear:left">
+<img class="imagenLeft" src="img/opciones27.png" alt="Opciones de Descarga">
+<br><br> 
+
+29. La Opción 29 muestra las diferentes opciones por las cuales se puede graficar, estas opciones son las mismas de la sección 6. 

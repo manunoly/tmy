@@ -1,0 +1,15 @@
+.floatright {
+    float: right;
+    border: 1px solid grey;
+}
+
+.floatleft {
+    float: left;
+    margin-right: 5%;
+    border: 1px solid grey;
+}
+
+.widefigure {
+    width: 95%;
+    border: 1px solid grey;
+}
