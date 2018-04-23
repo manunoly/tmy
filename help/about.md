@@ -5,8 +5,7 @@ Grupo de Investigación en <a href="http://www.iner.gob.ec/" target="_blank">Efi
 
  **Author**: Manuel Almaguer <a href="https://github.com/manunoly" target="_blank">web</a>
 
- **Derechos de Autor**: <a href="https://drive.google.com/open?id=0B23Sk-n1WfF9Tm9fS0VicUtBcDBpcEF5NG1EUmxtWnpiTzVj" target="_blank">IEPI</a>
+ **Derechos de Autor**: <a href="https://github.com/manunoly/tmy/blob/master/softwareDerechoAutor.pdf" target="_blank">IEPI</a>
  
-
- **Codigo Fuente**: <a href="https://github.com/manunoly/tmy" target="_blank">IEPI</a>
+ **Codigo Fuente**: <a href="https://github.com/manunoly/tmy" target="_blank">github</a>
  

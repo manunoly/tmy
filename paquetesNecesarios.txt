@@ -1,1 +1,1 @@
-#assertthat, ggthemes, httpuv, sourcetools, xtable,ggplot2,geoR,RColorBrewer, shiny, 
+#assertthat, ggthemes, httpuv, sourcetools, xtable,ggplot2,geoR,RColorBrewer, shiny, mgcv

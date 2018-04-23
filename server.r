@@ -1,3 +1,4 @@
+library(mgcv)
 #source("fun/helpers.r")
 source("fun/plotWindrose.r")
 source("fun/rmsd.r")
